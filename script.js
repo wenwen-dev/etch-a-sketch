@@ -20,12 +20,6 @@ for (let i = 0; i < 16; i++) {
 const boxes = document.querySelectorAll('.box');
 boxes.forEach(box => box.addEventListener('mouseover', e => {e.target.style.background = 'lightpink'; console.log(e.bubbles);}));
 
-function changeColor(e) {
-  console.log(e.bubbles);
-  console.log(e.target);
-  alert('You clicked: ' + e.target.tagName);
-  // e.stopImmediatePropagation();
-  // const test = e.target;
-  // e.target.stopPropagation;
-  e.target.style = 'background-color: red;';
-}
+//Question: .grid-container contains 16 .container (each line is a .container)
+// Bubbling is supposed to make each box's container (each line) turn into
+//light pink, too. But it's not. Why is that?
