@@ -17,8 +17,11 @@ for (let i = 0; i < 16; i++) {
   }
 }
 
-const boxes = document.querySelectorAll('.box');
-boxes.forEach(box => box.addEventListener('mouseover', e => {e.target.style.background = 'lightpink'; console.log(e.bubbles);}));
+const boxes = document.querySelectorAll('.box, .container, .grid-container');
+boxes.forEach(box => box.addEventListener('click', e => alert('hi'+e.currentTarget.classList)));
+
+
+//question answered: only when parent is selected too for the eventListener does bubbling apply.
 
 //Question: .grid-container contains 16 .container (each line is a .container)
 // Bubbling is supposed to make each box's container (each line) turn into
