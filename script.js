@@ -1,4 +1,7 @@
 const body = document.querySelector('body');
+const gridContainer = document.createElement('div');
+gridContainer.classList.add('grid-container');
+body.appendChild(gridContainer);
 
 
 for (let i = 0; i < 16; i++) {
@@ -12,4 +15,7 @@ for (let i = 0; i < 16; i++) {
     box.setAttribute('style', 'background: #B1B2FF; width: 30px; height: 30px; border: solid 1px #EEF1FF')
     container.appendChild(box);
   }
+  gridContainer.appendChild(container);
 }
+
+
