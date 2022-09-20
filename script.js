@@ -21,9 +21,10 @@ let boxes = document.querySelectorAll('.box');
 //use let instead of const, because after 1st grid is removed, boxes need to be reassigned to new boxes
 boxes.forEach(box => box.addEventListener('mouseover', changeColor));
 
-let randomColor = '#'.concat((Math.floor(Math.random() * 16777215)).toString(16));
+
 
 function changeColor(e) {
+  let randomColor = '#'.concat((Math.floor(Math.random() * 16777215)).toString(16));
   e.target.style.background = randomColor;
 }
 
